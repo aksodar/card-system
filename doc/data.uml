@@ -3,59 +3,30 @@
   <ID>JAVA</ID>
   <OriginalElement>ru.gb.cardsystem.data</OriginalElement>
   <nodes>
+    <node x="49.78766025641022" y="0.0">ru.gb.cardsystem.controllers.JComponentController</node>
+    <node x="394.57291666666663" y="170.0">ru.gb.cardsystem.data.User</node>
     <node x="682.5376602564102" y="292.0">ru.gb.cardsystem.service.Writable</node>
+    <node x="100.57291666666663" y="236.0">ru.gb.cardsystem.controllers.impl.TextFieldController</node>
+    <node x="13.005058108821999" y="682.0">ru.gb.cardsystem.controllers.impl.ButtonWriterToLoggerController</node>
+    <node x="333.07291666666663" y="518.0">ru.gb.cardsystem.service.impl.LoggerWriterService</node>
     <node x="0.0" y="860.0">ru.gb.cardsystem.controllers.impl.PanelController</node>
     <node x="717.78125" y="529.0">ru.gb.cardsystem.controllers.JComponentWriterController</node>
-    <node x="49.78766025641022" y="0.0">ru.gb.cardsystem.controllers.JComponentController</node>
-    <node x="333.07291666666663" y="518.0">ru.gb.cardsystem.service.impl.LoggerWriterService</node>
-    <node x="100.57291666666663" y="236.0">ru.gb.cardsystem.controllers.impl.TextFieldController</node>
-    <node x="394.57291666666663" y="170.0">ru.gb.cardsystem.data.User</node>
-    <node x="254.54166666666663" y="700.0">ru.gb.cardsystem.controllers.impl.ButtonWriterToLoggerController</node>
+    <node x="496.78125" y="658.0">ru.gb.cardsystem.controllers.impl.ButtonWriterToFileController</node>
   </nodes>
   <notes />
   <edges>
-    <edge source="ru.gb.cardsystem.service.impl.LoggerWriterService" target="ru.gb.cardsystem.service.Writable">
-      <point x="132.0" y="-61.0" />
-      <point x="641.0729166666666" y="493.0" />
-      <point x="723.3709935897434" y="493.0" />
-      <point x="-81.66666666666669" y="27.0" />
-    </edge>
-    <edge source="ru.gb.cardsystem.controllers.impl.ButtonWriterToLoggerController" target="ru.gb.cardsystem.controllers.JComponentWriterController">
-      <point x="71.5" y="-50.0" />
-      <point x="469.04166666666663" y="670.0" />
-      <point x="775.78125" y="670.0" />
-      <point x="-116.0" y="50.0" />
-    </edge>
-    <edge source="ru.gb.cardsystem.controllers.impl.TextFieldController" target="ru.gb.cardsystem.controllers.JComponentController">
-      <point x="-68.5" y="-83.0" />
-      <point x="169.07291666666663" y="150.0" />
-      <point x="190.97516025641022" y="150.0" />
-      <point x="15.6875" y="50.0" />
-    </edge>
-    <edge source="ru.gb.cardsystem.controllers.impl.PanelController" target="ru.gb.cardsystem.controllers.JComponentController">
-      <point x="-41.08333333333326" y="-116.0" />
-      <point x="205.41666666666674" y="830.0" />
-      <point x="79.07291666666663" y="830.0" />
-      <point x="79.07291666666663" y="140.0" />
-      <point x="128.22516025641022" y="140.0" />
-      <point x="-47.0625" y="50.0" />
-    </edge>
-    <edge source="ru.gb.cardsystem.controllers.JComponentWriterController" target="ru.gb.cardsystem.controllers.JComponentController">
-      <point x="130.5" y="-50.0" />
-      <point x="1022.28125" y="493.0" />
-      <point x="949.0376602564102" y="493.0" />
-      <point x="949.0376602564102" y="130.0" />
-      <point x="285.1001602564102" y="130.0" />
-      <point x="109.8125" y="50.0" />
+    <edge source="ru.gb.cardsystem.controllers.impl.ButtonWriterToFileController" target="ru.gb.cardsystem.controllers.JComponentWriterController" relationship="GENERALIZATION">
+      <point x="0.0" y="-51.0" />
+      <point x="0.0" y="51.0" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="0.5564373897707231" x="533.0" y="557.0" />
+  <settings layout="Hierarchic" zoom="0.869433421516755" showDependencies="false" x="662.4293502377178" y="430.6820919175911" />
   <SelectedNodes>
-    <node>ru.gb.cardsystem.service.Writable</node>
+    <node>ru.gb.cardsystem.controllers.impl.ButtonWriterToFileController</node>
   </SelectedNodes>
   <Categories>
-    <Category>Fields</Category>
     <Category>Constructors</Category>
+    <Category>Fields</Category>
     <Category>Methods</Category>
   </Categories>
   <SCOPE>All</SCOPE>
