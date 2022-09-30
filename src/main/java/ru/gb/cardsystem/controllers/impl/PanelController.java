@@ -21,14 +21,14 @@ public class PanelController extends JComponentController<JComponent> {
     private final ApplicationContext appContext;
     private final JComponentController<JTextField> textFieldController;
     private final JComponentWriterController<JButton> buttonWriterToLoggerController;
-    private final JComponentWriterController<JButton> ButtonUserToCSVWriterController;
+    private final JComponentWriterController<JButton> buttonUserToCSVWriterController;
 
     public PanelController(final ApplicationContext appContext) {
         super(new ArrayList<>());
         this.appContext = appContext;
         this.textFieldController = new TextFieldController();
         this.buttonWriterToLoggerController = new ButtonWriterToLoggerController();
-        this.ButtonUserToCSVWriterController = new ButtonUserToCSVWriterController();
+        this.buttonUserToCSVWriterController = new ButtonUserToCSVWriterController(this.textFieldController);
         initTextInputPanel();
         initButtonPanel();
     }
@@ -67,7 +67,7 @@ public class PanelController extends JComponentController<JComponent> {
             buttonPanel.add(button);
         }
 
-        for (final JButton button : ButtonUserToCSVWriterController.getComponents()) {
+        for (final JButton button : buttonUserToCSVWriterController.getComponents()) {
             buttonPanel.add(button);
         }
 

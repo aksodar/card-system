@@ -13,12 +13,16 @@ import java.util.Map;
 
 public class ButtonUserToCSVWriterController extends JComponentWriterController<JButton> {
 
-    private final JComponentController<JTextField> textFieldController;
+    private JComponentController<JTextField> textFieldController;
 
-    protected ButtonUserToCSVWriterController() {
+    protected ButtonUserToCSVWriterController(JComponentController<JTextField> tfc ) {
         super(new ArrayList<>(), new UserToCSVWriterService());
-        this.textFieldController = new TextFieldController();
+        this.textFieldController = tfc;
         init();
+    }
+
+    public void setTextFieldController(JComponentController<JTextField> tfc){
+        this.textFieldController = tfc;
     }
 
     private void init() {
@@ -31,9 +35,10 @@ public class ButtonUserToCSVWriterController extends JComponentWriterController<
                     data.put(textField.getName(), textField.getText());
                 }
                 getWritableService().write(data);
+                
             }
         });
-
+        
         getComponents().add(writeInCSV);
     }
 }
