@@ -41,9 +41,9 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
-               "firstName='" + firstName + '\'' +
-               ", secondName='" + secondName + '\'' +
-               ", patronymic='" + patronymic + '\'' +
-               '}';
+                "firstName='" + firstName + '\'' +
+                ", secondName='" + secondName + '\'' +
+                ", patronymic='" + patronymic + '\'' +
+                '}';
     }
 }
