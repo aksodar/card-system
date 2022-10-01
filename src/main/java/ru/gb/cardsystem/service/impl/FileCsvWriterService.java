@@ -29,7 +29,7 @@ public class FileCsvWriterService implements Writable {
             concat.append(";");
             concat.append(user.getPatronymic());
             concat.append('\n');
-            fileWriter.append(concat).toString();
+            fileWriter.append(concat);
             fileWriter.flush();
 //            fileWriter.close();
         } catch (IOException e) {
