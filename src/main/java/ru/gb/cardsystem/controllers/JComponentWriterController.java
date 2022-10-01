@@ -21,3 +21,4 @@ public abstract class JComponentWriterController<T extends JComponent> extends J
         return writableService;
     }
 }
+

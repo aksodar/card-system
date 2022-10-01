@@ -14,19 +14,23 @@ import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
 
 public class PanelController extends JComponentController<JComponent> {
 
-    public static final int WIDTH_MAIN_PANEL = 300;
+    public static final int WIDTH_MAIN_PANEL = 450;
     public static final int HEIGHT_MAIN_PANEL = 200;
     public static final String NAME_MAIN_PANEL = "User's card system";
 
     private final ApplicationContext appContext;
     private final JComponentController<JTextField> textFieldController;
     private final JComponentWriterController<JButton> buttonWriterToLoggerController;
+    private final JComponentWriterController<JButton> buttonWriterToFileTxtController;
+    private final JComponentWriterController<JButton> buttonWriterToFileCsvController;
 
     public PanelController(final ApplicationContext appContext) {
         super(new ArrayList<>());
         this.appContext = appContext;
         this.textFieldController = new TextFieldController();
         this.buttonWriterToLoggerController = new ButtonWriterToLoggerController();
+        this.buttonWriterToFileTxtController = new ButtonWriterToFileTxtController();
+        this.buttonWriterToFileCsvController = new ButtonWriterToFileCsvController();
         initTextInputPanel();
         initButtonPanel();
     }
@@ -64,7 +68,12 @@ public class PanelController extends JComponentController<JComponent> {
         for (final JButton button : buttonWriterToLoggerController.getComponents()) {
             buttonPanel.add(button);
         }
-
+        for (final JButton button : buttonWriterToFileTxtController.getComponents()) {
+            buttonPanel.add(button);
+        }
+        for (final JButton button : buttonWriterToFileCsvController.getComponents()) {
+            buttonPanel.add(button);
+        }
         getComponents().add(buttonPanel);
     }
 }
