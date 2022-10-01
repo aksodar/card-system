@@ -2,7 +2,7 @@ package ru.gb.cardsystem.controllers.impl;
 
 import ru.gb.cardsystem.controllers.JComponentController;
 import ru.gb.cardsystem.controllers.JComponentWriterController;
-import ru.gb.cardsystem.service.impl.LoggerWriterService;
+import ru.gb.cardsystem.service.impl.FileCsvWriterService;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -11,19 +11,18 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ButtonWriterToLoggerController extends JComponentWriterController<JButton> {
-
+public class ButtonWriterToFileCsvController extends JComponentWriterController<JButton> {
     private final JComponentController<JTextField> textFieldController;
 
-    protected ButtonWriterToLoggerController() {
-        super(new ArrayList<>(), new LoggerWriterService());
+    protected ButtonWriterToFileCsvController() {
+        super(new ArrayList<>(), new FileCsvWriterService());
         this.textFieldController = new TextFieldController();
-        init();
+        initButtonWriterToFileCsvController();
     }
 
-    private void init() {
-        final JButton writeInLogger = new JButton("Write in Logger");
-        writeInLogger.addActionListener(new ActionListener() {
+    private void initButtonWriterToFileCsvController() {
+        final JButton writeInFile = new JButton("Write to CSV File");
+        writeInFile.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(final ActionEvent e) {
                 final Map<String, String> data = new HashMap<>();
@@ -34,6 +33,6 @@ public class ButtonWriterToLoggerController extends JComponentWriterController<J
             }
         });
 
-        getComponents().add(writeInLogger);
+        getComponents().add(writeInFile);
     }
 }
