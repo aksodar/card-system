@@ -5,7 +5,7 @@ import java.util.Map;
 /**
  * Interface defining the interaction of data output
  */
-public interface Writable {
+public interface Writable { // это есть абстракция
 
     void write(Map<String, String> data);
 
