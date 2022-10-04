@@ -1,0 +1,1 @@
+User{firstName='First Name', secondName='Second Name', patronymic='Patronymic'}
