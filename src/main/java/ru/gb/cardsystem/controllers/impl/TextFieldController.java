@@ -30,13 +30,13 @@ public class TextFieldController extends JComponentController<JTextField> {
         final JTextField textField = new JTextField();
         textField.setText(text);
         textField.setName(text);
-        textField.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseClicked(final MouseEvent e) {
-                textField.setText("");
-                super.mouseClicked(e);
-            }
-        });
+//        textField.addMouseListener(new MouseAdapter() {
+//            @Override
+//            public void mouseClicked(final MouseEvent e) {
+//                textField.setText("");
+//                super.mouseClicked(e);
+//            }
+//        });
         textField.addFocusListener(new FocusAdapter() {
             @Override
             public void focusLost(final FocusEvent e) {
